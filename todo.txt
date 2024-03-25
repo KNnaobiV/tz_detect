@@ -1,0 +1,18 @@
+1. Complete writing argparse
+2. Test with utc data. All the test done so far has been without UTC data.
+	You can convert one of the test data to UTC tz by subtracting the 
+	appropraite amount of delta from it and localizing
+3. Test with multiple years worth of data.
+	Concat two of the csv files and use get some common years
+4. Test the output format with timezones to the left of UTC
+
+Algorithm
+Open two csv files as dfs
+Get common years
+Get common weeks for common years
+
+For the common weeks in the common years:
+	Find the difference for float columns
+	Get the absolutely largest values for these columns
+	Get the time difference at corresponding locations if their values are close
+	Get the mode of the time differences.
